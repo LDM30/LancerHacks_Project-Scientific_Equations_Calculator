@@ -142,3 +142,34 @@ def newtSecond():
         print ("Invalid Input. Action Cancelled.")
 
 newtSecond()
+
+def gravAccel():
+    print ("Gravitational acceleration (weight): W = mg")
+    print ("Choose variable.")
+    select = str(input())
+
+    if (select == "W"):
+        print ("Solving for weight.")
+        mass = float(input("Input mass (kg)"))
+        grav = float(input("Input gravitational constant (m/s^2)"))
+        ans = (mass * grav)
+        print ("Answer: ", ans, " N")
+              
+    elif (select == "m"):
+        print ("Solving for mass.")
+        weight = float(input("Input weight (N)"))
+        grav = float(input("Input gravitational constant (m/s^2)"))
+        ans = (weight / grav)
+        print ("Answer: ", ans, " kg)")
+
+    elif (select == "g"):
+        print ("Solving for mass.")
+        weight = float(input("Input weight (N)"))
+        mass = float(input("Input mass (kg)"))
+        ans = (weight / mass)
+        print ("Answer: ", ans, " m/s^2)")
+        
+    else:
+        print ("Invalid Input. Action Cancelled.")
+
+gravAccel()
