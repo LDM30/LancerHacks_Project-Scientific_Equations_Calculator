@@ -48,12 +48,14 @@ def pythagoreanTheorum():
     select = str(input())
 
     if (select == "h"):
+        print ("Solving for hypotenuse.")
         a = float(input("Input first leg's length"))
         b = float(input("Input second leg's length"))
         ans = math.sqrt((a**2)+(b**2))
         print ("Answer: ", ans, " units)")
               
     elif (select == "l"):
+        print ("Solving for leg.")
         c = float(input("Input hypotenuse's length"))
         b = float(input("Input other leg's length"))
         ans = math.sqrt((c**2)-(b**2))
@@ -68,9 +70,9 @@ def findpH ():
     print ("ph = -log([H+})")
     conc = float(input("Input H+ concentration"))
     if (conc > 1):
-        print ("Out of Domain. Action Cancelled")
-    elif (conc < 0):
-        print ("Out of Domain. Action Cancelled")
+        print ("Out of Domain. Action Cancelled.")
+    elif (conc <= 0):
+        print ("Out of Domain. Action Cancelled.")
     else:
         ans = (-math.log(conc, 10))
         print ("Answer: ", ans, " pH units)")
@@ -80,10 +82,63 @@ def findpOH ():
     print ("ph = -log([OH-})")
     conc = float(input("Input OH- concentration"))
     if (conc > 1):
-        print ("Out of Domain. Action Cancelled")
-    elif (conc < 0):
-        print ("Out of Domain. Action Cancelled")
+        print ("Out of Domain. Action Cancelled.")
+    elif (conc <= 0):
+        print ("Out of Domain. Action Cancelled.")
     else:
         ans = (-math.log(conc, 10))
         print ("Answer: ", ans, " pOH units)")
 findpOH()
+
+def massEnergy():
+    print ("Mass-Energy Equivalence: e=mc^2")
+    print ("Find Mass or Energy? (m/e)")
+    select = str(input())
+
+    if (select == "e"):
+        print ("Solving for energy.")
+        mass = float(input("Input mass (kg)"))
+        ans = (mass * (299792458**2))
+        print ("Answer: ", ans, " Joules)")
+              
+    elif (select == "m"):
+        print ("Solving for mass.")
+        en = float(input("Input energy (J)"))
+        ans = (en / (299792458**2))
+        print ("Answer: ", ans, " kg)")
+        
+    else:
+        print ("Invalid Input. Action Cancelled.")
+
+massEnergy()
+
+def newtSecond():
+    print ("Newton's second law: F = ma")
+    print ("Choose variable.")
+    select = str(input())
+
+    if (select == "F"):
+        print ("Solving for force.")
+        mass = float(input("Input mass (kg)"))
+        accel = float(input("Input acceleration (m/s^2)"))
+        ans = (mass * accel)
+        print ("Answer: ", ans, " N")
+              
+    elif (select == "m"):
+        print ("Solving for mass.")
+        accel = float(input("Input acceleration (m/s^2)"))
+        force = float(input("Input Force (N)"))
+        ans = (accel / force)
+        print ("Answer: ", ans, " kg)")
+
+    elif (select == "a"):
+        print ("Solving for mass.")
+        mass = float(input("Input mass (kg)"))
+        force = float(input("Input Force (N)"))
+        ans = (mass / force)
+        print ("Answer: ", ans, " m/s^2)")
+        
+    else:
+        print ("Invalid Input. Action Cancelled.")
+
+newtSecond()
