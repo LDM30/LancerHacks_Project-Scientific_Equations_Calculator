@@ -1,4 +1,4 @@
-# LancerHacks_Project
+# LancerHacks Project - Scientific Equations Calculator
 
 ## Important: In order to run program, please make sure you have the "playsound" , "math" , "tkinter" , and "pathlib" modules installed to run the program.
 
