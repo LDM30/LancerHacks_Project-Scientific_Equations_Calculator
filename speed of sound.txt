@@ -1,0 +1,68 @@
+def gottaGoFast():
+    print ("Speed of sound")
+    print ("Is the medium a solid, liquid, or air? (s/l/a)")
+    select = str(input())
+
+    if (select == "s"):
+        print ("Speed of sound in a solid: v = sqrt(y/p)")
+        print ("Choose a variable")
+        select = str(input())
+    
+        if (select == "v"):
+            print ("Solving for speed.")
+            young = float(input("Input young's modulus"))
+            dens = float(input("Input density (kg/m^3)"))
+            ans = math.sqrt(young / dens)
+            print ("Answer: ", ans, " m/s")                  
+        elif (select == "y"):
+            print ("Solving for young's modulus.")
+            sanic = float(input("Input speed of sound (m/s)"))
+            dens = float(input("Input density (kg/m^3)"))
+            ans = ((sanic**2) / dens)
+            print ("Answer: ", ans)
+        elif (select == "p"):
+            print ("Solving for density.")
+            young = float(input("Input young's modulus"))
+            sanic = float(input("Input speed of sound (m/s)"))
+            ans = (young / (sanic**2))
+            print ("Answer: ", ans, " kg/m^3")
+        else:
+            print ("Invalid Input. Action Cancelled.")
+
+    elif (select == "l"):
+        print ("Speed of sound in a liquid: v = sqrt(b/p)")
+        print ("Choose a variable")
+        select == str(input())
+    
+        if (select == "v"):
+            print ("Solving for speed.")
+            bulk = float(input("Input bulk modulus"))
+            dens = float(input("Input density (kg/m^3)"))
+            ans = math.sqrt(bulk / dens)
+            print ("Answer: ", ans, " m/s")                  
+        elif (select == "b"):
+            print ("Solving for bulk modulus.")
+            sanic = float(input("Input speed of sound (m/s)"))
+            dens = float(input("Input density (kg/m^3)"))
+            ans = ((sanic**2) / dens)
+            print ("Answer: ", ans)
+        elif (select == "p"):
+            print ("Solving for density.")
+            bulk = float(input("Input bulk modulus"))
+            sanic = float(input("Input speed of sound (m/s)"))
+            ans = (bulk / (sanic**2))
+            print ("Answer: ", ans, " kg/m^3")
+        else:
+            print ("Invalid Input. Action Cancelled.")
+
+    elif (select == "a"):
+        print ("Speed of sound in air: v = 331 + sqrt(1 + (T / 273.15))")
+        temp = float(input("Input temperature (C)"))
+        ans = (331 + math.sqrt(1 + (temp / 273.15)))
+        print ("Answer: ", ans, " m/s")
+        
+    else:
+            print ("Invalid Input. Action Cancelled.")
+
+gottaGoFast()
+        
