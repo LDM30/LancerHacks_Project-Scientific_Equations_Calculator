@@ -1,6 +1,6 @@
-## LancerHacks_Project
+# LancerHacks_Project
 
-# Important: In order to run program, please make sure you have the "playsound" , "math" , "tkinter" , and "pathlib" modules installed to run the program.
+## Important: In order to run program, please make sure you have the "playsound" , "math" , "tkinter" , and "pathlib" modules installed to run the program.
 
 If you do not have some of these modules, go to your command prompt and enter "pip -install "name of module you want to install" " example: pip -install playsound (after you type the line into the command prompt, press enter and the module will install).
 
